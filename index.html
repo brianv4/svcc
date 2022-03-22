@@ -391,38 +391,42 @@
                     </div>
                 </div>
 
-                <form action="" class="contact__form">
+                <form action="" class="contact__form" name="svcc-contact-form">
                     <div class="contact__inputs">
                         <div class="contact__content">
-                            <input type="text" placeholder=" " class="contact__input" />
+                            <input type="text" placeholder=" " class="contact__input" name="nama" />
                             <label for="" class="contact__label">Nama Lengkap</label>
                         </div>
                         <div class="contact__content">
-                            <input type="email" placeholder=" " class="contact__input" />
+                            <input type="email" placeholder=" " class="contact__input" name="email" />
                             <label for="" class="contact__label">Email</label>
                         </div>
                         <div class="contact__content">
-                            <input type="text" placeholder=" " class="contact__input" />
+                            <input type="text" placeholder=" " class="contact__input" name="perusahaan" />
                             <label for="" class="contact__label">Nama Perusahaan</label>
                         </div>
                         <div class="contact__content">
-                            <input type="text" placeholder=" " class="contact__input" />
+                            <input type="text" placeholder=" " class="contact__input" name="jenis" />
                             <label for="" class="contact__label">Jenis Produk</label>
                         </div>
                         <div class="contact__content">
-                            <input type="text" placeholder=" " class="contact__input" />
+                            <input type="text" placeholder=" " class="contact__input" name="nomor" />
                             <label for="" class="contact__label">Nomor Telepon</label>
                         </div>
                         <div class="contact__content">
-                            <input type="text" placeholder=" " class="contact__input" />
+                            <input type="text" placeholder=" " class="contact__input" name="who-svcc" />
                             <label for="" class="contact__label">Tahu SVCC darimana ?</label>
                         </div>
 
                         <div class="contact__content contact__area">
-                            <textarea name="message" placeholder=" " class="contact__input"></textarea>
+                            <textarea name="how-event" placeholder=" " class="contact__input"></textarea>
                             <label for="" class="contact__label">Seperti apa kegiatan yang anda ingin ?</label>
                         </div>
                     </div>
+                    <div class="row">
+                        <button onClick="alert('Terima Kasih sudah mengisi form!')" type="submit">Send</button>
+                    </div>
+                    <br />
 
                     <a href="assets/doc/ITDRI-DLV-210122-1630 SVCC Profile (GA).pptx" class="button button--flex">
               Get Proposal Now
@@ -508,6 +512,21 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbzbAgEeLW0oAZGd0ffUAKHrKfNiEaBZFYWwkkpQ5ttTYQefADUrc9NO-cHFxS-wOZG2/exec";
+        const form = document.forms["svcc-contact-form"];
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURL, {
+                    method: "POST",
+                    body: new FormData(form),
+                })
+                .then((response) => console.log("Success!", response))
+                .catch((error) => console.error("Error!", error.message));
+        });
+    </script>
 </body>
 
 </html>
