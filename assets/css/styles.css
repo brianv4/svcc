@@ -336,16 +336,16 @@ the website, in dark theme
 /*=============== HOME ===============*/
 
 .home {
-    padding: 3.5rem 0 2rem;
+    padding: 3rem 0 2.5rem;
 }
 
 .home__container {
     position: relative;
-    row-gap: 2rem;
+    row-gap: 2.5rem;
 }
 
 .home__img {
-    width: 200px;
+    width: 00px;
     justify-self: center;
 }
 
