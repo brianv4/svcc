@@ -48,7 +48,7 @@
 
 /* Responsive typography */
 
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 768px) {
      :root {
         --big-font-size3: .5rem;
         --h1-font-size: 2.25rem;
@@ -493,7 +493,7 @@ the website, in dark theme
 --------------------------------------------------------------*/
 
 .cta {
-    background-color: hsl(262deg 100% 84%);
+    background-color: hsl(300deg 100% 84%);
     background-size: cover;
     border-radius: 12px;
     padding: 50px 25px;
@@ -501,7 +501,7 @@ the website, in dark theme
 
 .cta h3 {
     color: #3b0047;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
 }
 
