@@ -205,7 +205,6 @@ the website, in dark theme
     /*For animation*/
 }
 
-
 /*=============== HEADER ===============*/
 
 .header {
@@ -483,18 +482,18 @@ the website, in dark theme
 /*# Cta
 --------------------------------------------------------------*/
 .cta {
-    background-color: var(--first-color);
+    background-color: hsl(262deg 100% 84%);
     background-size: cover;
     border-radius: 12px;
     padding: 50px 25px;
   }
   .cta h3 {
-    color: #fff;
+    color: #3b0047;
     font-size: 28px;
     font-weight: 700;
   }
   .cta p {
-    color: #fff;
+    color: #3b0047;
   }
   .cta .cta-btn {
     font-family: "Jost", sans-serif;
@@ -506,8 +505,8 @@ the website, in dark theme
     border-radius: 100px;
     transition: 0.5s;
     margin: 10px;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #3b0047;
+    color: #3b0047;
   }
   .cta .cta-btn:hover {
     background: #8e2fa1;
