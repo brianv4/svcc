@@ -50,7 +50,7 @@
 
 @media screen and (min-width: 968px) {
      :root {
-        --big-font-size: 3.5rem;
+        --big-font-size3: .5rem;
         --h1-font-size: 2.25rem;
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.25rem;
@@ -128,6 +128,7 @@ body.dark-theme {
     --body-color: hsl(var(--hue), 3%, 5%);
     --lighten-dark: hsl(var(--hue), 40%, 6%);
     --container-color: hsl(var(--hue), 100%, 14%);
+    --cta-darkcolor: hsl(262deg 100% 84%);
 }
 
 
@@ -151,6 +152,12 @@ Color changes in some parts of
 the website, in dark theme 
 ==========*/
 
+.dark-theme .cta h3,
+.dark-theme .cta p,
+.dark-theme .cta .cta-btn {
+    color: var(--cta-darkcolor);
+}
+
 .dark-theme .steps__bg {
     background-color: var(--lighten-dark);
 }
@@ -164,7 +171,8 @@ the website, in dark theme
 }
 
 .dark-theme .product__circle,
-.dark-theme .steps__card {
+.dark-theme .steps__card,
+.dark-theme .cta {
     background-color: var(--container-color);
 }
 
@@ -204,6 +212,7 @@ the website, in dark theme
     overflow: hidden;
     /*For animation*/
 }
+
 
 /*=============== HEADER ===============*/
 
@@ -344,7 +353,7 @@ the website, in dark theme
 }
 
 .home__img {
-    width: 00px;
+    width: 200px;
     justify-self: center;
 }
 
@@ -479,23 +488,28 @@ the website, in dark theme
     margin-top: 0.15rem;
 }
 
+
 /*# Cta
 --------------------------------------------------------------*/
+
 .cta {
     background-color: hsl(262deg 100% 84%);
     background-size: cover;
     border-radius: 12px;
     padding: 50px 25px;
-  }
-  .cta h3 {
+}
+
+.cta h3 {
     color: #3b0047;
     font-size: 28px;
     font-weight: 700;
-  }
-  .cta p {
+}
+
+.cta p {
     color: #3b0047;
-  }
-  .cta .cta-btn {
+}
+
+.cta .cta-btn {
     font-family: "Jost", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -507,24 +521,28 @@ the website, in dark theme
     margin: 10px;
     border: 2px solid #3b0047;
     color: #3b0047;
-  }
-  .cta .cta-btn:hover {
+}
+
+.cta .cta-btn:hover {
     background: #8e2fa1;
     border: 2px solid #c467d6;
-  }
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
     .cta {
-      background-attachment: scroll;
+        background-attachment: scroll;
     }
-  }
-  @media (min-width: 769px) {
+}
+
+@media (min-width: 769px) {
     .cta .cta-btn-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
-  }
-  
+}
+
+
 /*=============== STEPS ===============*/
 
 .steps__bg {
