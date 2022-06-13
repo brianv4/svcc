@@ -268,7 +268,7 @@ the website, in dark theme
     cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .nav__menu {
         position: fixed;
         background-color: var(--container-color);
@@ -1182,7 +1182,7 @@ the website, in dark theme
 /* Slideshow container */
 
 .slideshow-container {
-    max-width: 700px;
+    max-width: 768px;
     position: relative;
     margin: auto;
 }
