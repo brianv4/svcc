@@ -34,28 +34,28 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo"><img src="assets/img/logo_svccforcampus.png" style="width: 25px"> SVCC For Campus</a>
+            <a style="color: white" href="#" class="nav__logo"><img src="assets/img/logo_svccforcampus.png" style="width: 25px"> SVCC For Campus</a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">Home</a>
+                        <a href="#home" class="nav__link active-link" style="color: white">Home</a>
                     </li>
                     <!--<li class="nav__item">
                         <a href="#about" class="nav__link">About</a>
                     </li>-->
                     <li class="nav__item">
-                        <a href="product.html" class="nav__link">Product</a>
+                        <a style="color: white" href="product.html" class="nav__link">Product</a>
                     </li>
                     <li class="nav__item">
                         <!-- <a href="#faqs" class="nav__link">FAQs</a> -->
-                        <a href="artikel.html" class="nav__link">Blog</a>
+                        <a style="color: white" href="artikel.html" class="nav__link">Blog</a>
                     </li>
                     <!--<li class="nav__item">
                         <a href="product.html#order" class="nav__link">Order SVCC</a>
                     </li>-->
                     <li class="nav__item">
-                        <a href="https://wa.me/+6281977158336" class="nav__link">Contact Us</a>
+                        <a style="color: white" href="https://wa.me/+6281977158336" class="nav__link">Contact Us</a>
                     </li>
                 </ul>
 
@@ -66,7 +66,7 @@
 
             <div class="nav__btns">
                 <!-- Theme change button -->
-                <i class="ri-moon-line change-theme" id="theme-button"></i>
+                <i class="ri-moon-line change-theme" style="color: white" id="theme-button"></i>
 
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
@@ -77,6 +77,67 @@
 
     <main class="main">
         <!--==================== HOME ====================-->
+        <section class="" id="home">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 7</div>
+                    <img src="assets/img/why_to_order_cover.png" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 7</div>
+                    <img src="assets/img/why_to_order_1.png" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 7</div>
+                    <img src="assets/img/why_to_order_2.png" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 7</div>
+                    <img src="assets/img/why_to_order_3.png" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 7</div>
+                    <img src="assets/img/why_to_order_4.png" style=" width:100% ">
+                    <div class="text "></div>
+                </div>
+
+                <div class="mySlides fade ">
+                    <div class="numbertext ">6 / 7</div>
+                    <img src="assets/img/why_to_order_5.png" style="width:100%">
+                    <div class="text "></div>
+                </div>
+
+                <div class="mySlides fade ">
+                    <div class="numbertext ">7 / 7</div>
+                    <img src="assets/img/why_to_order_6.png" style="width:100%">
+                    <div class="text "></div>
+                </div>
+
+
+                <!-- <a class="prev " onclick="plusSlides(-1) ">❮</a>
+                <a class="next " onclick="plusSlides(1) ">❯</a> -->
+
+            </div>
+            <br>
+
+            <div style="text-align:center ">
+                <span class="dot " onclick="currentSlide(1) "></span>
+                <span class="dot " onclick="currentSlide(2) "></span>
+                <span class="dot " onclick="currentSlide(3) "></span>
+                <span class="dot " onclick="currentSlide(4) "></span>
+                <span class="dot " onclick="currentSlide(5) "></span>
+                <span class="dot " onclick="currentSlide(6) "></span>
+                <span class="dot " onclick="currentSlide(7) "></span>
+            </div>
+        </section>
         <section class="home" id="home">
             <div class="home__container container grid">
                 <img src="assets/img/logo_svccforcampus.png" alt="" class="home__img" />
@@ -580,6 +641,30 @@
                 .then((response) => console.log("Success! ", response))
                 .catch((error) => console.error("Error! ", error.message));
         });
+    </script>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
     </script>
 </body>
 
